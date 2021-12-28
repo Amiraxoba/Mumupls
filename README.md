@@ -14,4 +14,4 @@ Open the config.js File for Configuration<br>
 <b>Node: </b> if you want to use your home Directory as Download Directory don't type `~` instead use `/home/USERNAME`
 
 ## Bookmarks
-To add Bookmarks simply open the config.js File and add "{ name: "BOOKMARK_NAME", url: "BOOKMARK_URL" }" to the "customBookmarks" List
+To add Bookmarks simply open the config.js File and add `{ name: "BOOKMARK_NAME", url: "BOOKMARK_URL" }` to the `customBookmarks` List
