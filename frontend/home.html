@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <style>
+        html, body {
+            height: 100%;
+            background-color: #0675c2;
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+        input, button, p {
+            font-size: 20px;
+            border-radius: 10px;
+            border: none;
+            background-color: #035183;
+        }
+    </style>
+</head>
+<body>
+<h1>Home</h1>
+<h2>Search &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Type URL</h2>
+<label>
+    <input id="questionField" type="text" placeholder="Search with DuckDuckGo">
+</label>
+<button id="search-button">Search</button>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<label>
+    <input id="urlField" type="text" placeholder="Enter Address">
+</label>
+<button id="enter-button">Send</button>
+<script src="../config.js">
+</script>
+<script>
+    document.getElementById("questionField").placeholder = "Search with " + config.searchEngine.name
+    document.getElementById("search-button").addEventListener("click", () => {
+        const question = document.getElementById("questionField").value
+        location.replace(config.searchEngine.link.replace("QUESTION", question))
+    })
+    document.getElementById("enter-button").addEventListener("click", () => {
+        const question = document.getElementById("urlField").value
+        location.replace(question)
+    })
+</script>
+</body>
+</html>
